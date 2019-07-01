@@ -1,0 +1,215 @@
+# Background 背景图
+## Image 图片
+- x
+- y
+
+# Time 时间
+## Image 图片
+## Time.Hours 时间 - 小时数展示
+##
+- x
+- y
+
+
+
+{
+  "Background": {
+    "Image": {
+      "X": 0,
+      "Y": 0,
+      "ImageIndex": 0
+    }
+  },
+  "Time": {
+    "Hours": {
+      "Tens": {
+        "X": 0,
+        "Y": 0,
+        "ImageIndex": 1,
+        "ImagesCount": 10
+      },
+      "Ones": {
+        "X": 10,
+        "Y": 0,
+        "ImageIndex": 1,
+        "ImagesCount": 10
+      }
+    },
+    "Minutes": {
+      "Tens": {
+        "X": 0,
+        "Y": 50,
+        "ImageIndex": 1,
+        "ImagesCount": 10
+      },
+      "Ones": {
+        "X": 0,
+        "Y": 70,
+        "ImageIndex": 1,
+        "ImagesCount": 10
+      }
+    }
+  },
+  "Activity": {
+    "Steps": {
+      "Number": {
+        "TopLeftX": 0,
+        "TopLeftY": 80,
+        "BottomRightX": 0,
+        "BottomRightY": 90,
+        "Alignment": "TopRight",
+        "Spacing": 1,
+        "ImageIndex": 11,
+        "ImagesCount": 10
+      }
+    },
+    "Calories": {
+      "Number": {
+        "TopLeftX": 0,
+        "TopLeftY": 100,
+        "BottomRightX": 0,
+        "BottomRightY": 110,
+        "Alignment": "TopRight",
+        "Spacing": 1,
+        "ImageIndex": 11,
+        "ImagesCount": 10
+      }
+    },
+    "Pulse": {
+      "Number": {
+        "TopLeftX": 0,
+        "TopLeftY": 120,
+        "BottomRightX": 0,
+        "BottomRightY": 130,
+        "Alignment": "TopLeft",
+        "Spacing": 1,
+        "ImageIndex": 11,
+        "ImagesCount": 10
+      }
+    }
+  },
+  "Date": {
+    "MonthAndDay": {
+      "Separate": {
+        "Month": {
+          "TopLeftX": 0,
+          "TopLeftY": 140,
+          "BottomRightX": 0,
+          "BottomRightY": 150,
+          "Alignment": "TopCenter",
+          "Spacing": 1,
+          "ImageIndex": 21,
+          "ImagesCount": 10
+        },
+        "Day": {
+          "TopLeftX": 0,
+          "TopLeftY": 160,
+          "BottomRightX": 9,
+          "BottomRightY": 170,
+          "Alignment": "TopCenter",
+          "Spacing": 1,
+          "ImageIndex": 21,
+          "ImagesCount": 10
+        }
+      },
+      "TwoDigitsMonth": false,
+      "TwoDigitsDay": false
+    },
+    "WeekDay": {
+      "X": 40,
+      "Y": 0,
+      "ImageIndex": 31,
+      "ImagesCount": 7
+    }
+  },
+  "StepsProgress": {
+    "Linear": {
+      "StartImageIndex": 38,
+      "Segments": [
+        {
+          "X": 5,
+          "Y": 46
+        },
+        {
+          "X": 5,
+          "Y": 46
+        },
+        {
+          "X": 5,
+          "Y": 46
+        },
+        {
+          "X": 5,
+          "Y": 46
+        },
+        {
+          "X": 5,
+          "Y": 46
+        },
+        {
+          "X": 5,
+          "Y": 46
+        },
+        {
+          "X": 5,
+          "Y": 46
+        },
+        {
+          "X": 5,
+          "Y": 46
+        },
+        {
+          "X": 5,
+          "Y": 46
+        },
+        {
+          "X": 5,
+          "Y": 46
+        }
+      ]
+    }
+  },
+  "Status": {
+    "Bluetooth": {
+      "Coordinates": {
+        "X": 56,
+        "Y": 125
+      },
+      "ImageIndexOff": 48
+    },
+    "Lock": {
+      "Coordinates": {
+        "X": 46,
+        "Y": 125
+      },
+      "ImageIndexOff": 49
+    },
+    "DoNotDisturb": {
+      "Coordinates": {
+        "X": 66,
+        "Y": 125
+      },
+      "ImageIndexOn": 50
+    }
+  },
+  "Battery": {
+    "Text": {
+      "Number": {
+        "TopLeftX": 12,
+        "TopLeftY": 140,
+        "BottomRightX": 55,
+        "BottomRightY": 11,
+        "Alignment": "TopLeft",
+        "Spacing": 2,
+        "ImageIndex": 11,
+        "ImagesCount": 10
+      }
+    },
+    "Icon": {
+      "X": 4,
+      "Y": 140,
+      "ImageIndex": 51,
+      "ImagesCount": 5
+    }
+  }
+}

@@ -41,8 +41,8 @@
       "Number": {
         "TopLeftX": 0,
         "TopLeftY": 140,
-        "BottomRightX": 75,
-        "BottomRightY": 141,
+        "BottomRightX": 0,
+        "BottomRightY": 0,
         "Alignment": "TopRight",
         "Spacing": 1,
         "ImageIndex": 11,
@@ -53,8 +53,8 @@
       "Number": {
         "TopLeftX": 15,
         "TopLeftY": 12,
-        "BottomRightX": 37,
-        "BottomRightY": 143,
+        "BottomRightX": 0,
+        "BottomRightY": 0,
         "Alignment": "TopRight",
         "Spacing": 1,
         "ImageIndex": 11,

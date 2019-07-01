@@ -1,0 +1,99 @@
+html, body, .mi4 {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mi4 .mi4-box {
+  background: #000;
+  display: inline-block;
+  padding: 10px 10px;
+  position: absolute;
+  border-top: 30px solid;
+  border-bottom: 60px solid;
+  border-radius: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+}
+
+.mi4 .mi4-box::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #333;
+  border-radius: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -40px;
+  background-color: #332f2f;
+}
+
+.mi4 .mi4-preview {
+  width: 120px;
+  height: 240px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: url("./../resources/000.png") no-repeat center center;
+  background-size: 100% 100%;
+  background-color: #FFF;
+  position: relative;
+  z-index: 1;
+}
+
+.mi4 .mi4-preview .MI4Modular {
+  display: inline-block;
+  position: absolute;
+  z-index: 100;
+}
+
+
+.time {
+  width: 30px;
+  height: 20px;
+  background: #8BC34A;
+}
+
+.selected {
+  background-color: #3ed0448f;
+  cursor: pointer;
+}
+
+/* 看板 */
+.kanban {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-right: 1px dashed #ccc;
+}
+
+.kanban .col {
+  display: flex;
+  flex-direction: row;
+}
+
+.kanban .col .row {
+  flex: 1;
+  overflow: auto;
+}
+
+.kanban .col .row .input {
+  width: 80px;
+  margin-left: 5px;
+  height: 24px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.kanban .col .row .title {
+  padding-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

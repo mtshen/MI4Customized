@@ -1,7 +1,8 @@
-const timeElement = document.querySelector('.time');
-const MI4BoxElement = document.querySelector('.mi4-preview');
 const XElement = document.querySelector('.elementX');
 const YElement = document.querySelector('.elementY');
+const MI4BoxElement = document.querySelector('.mi4-preview');
+const ModularTitleElement = document.querySelector('.ModularTitle');
+const MI4ExpBtnElement = document.querySelector('.expBtn');
 const MI4Config = {};
 
 MI4Config.width = MI4BoxElement.offsetWidth;
@@ -44,7 +45,6 @@ function onDragElement(element, config = {}) {
   //鼠标抬起事件
   document.body.addEventListener('mouseup', () => {
     elementEvent.isDown = false;
-    reposition(element, elementEvent);
   });
 
   // 鼠标移动事件
@@ -88,9 +88,11 @@ function reposition(element, elementEvent) {
   element.style.top = elementEvent.y + 'px';
   XElement.value = elementEvent.x;
   YElement.value = elementEvent.y;
+  const type = element.getAttribute('data-type');
+  ModularTitleElement.innerHTML = MI4ParseJSONMapElements[type].title;
+  MI4ParseJSONMapElements[type].x = elementEvent.x;
+  MI4ParseJSONMapElements[type].y = elementEvent.y;
 }
-
-onDragElement(timeElement);
 
 // 键盘修改
 window.addEventListener('keydown', (event) => {
@@ -142,4 +144,28 @@ function moveElement(event) {
       break;
 
   }
+}
+
+MI4ExpBtnElement.addEventListener('click', updateExpJSON);
+
+function updateExpJSON() {
+  for (const key in MI4ParseJSONMapElements) {
+    const elementInfo = MI4ParseJSONMapElements[key];
+    switch(elementInfo.type) {
+      case 0:
+      case 1:
+          setParseXY(window.VCASIO_CLASIC_PACKED, key, elementInfo);
+        break;
+      case 2:
+          setParseXY2(window.VCASIO_CLASIC_PACKED, key, elementInfo);
+      default:
+        break;
+    }
+  }
+
+  document.querySelector('.expJSON').innerHTML = JSON.stringify(window.VCASIO_CLASIC_PACKED);
+}
+
+for (const key in MI4ParseJSONMapElements) {
+  onDragElement(MI4ParseJSONMapElements[key].element, MI4ParseJSONMapElements[key]);
 }
