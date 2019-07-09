@@ -35,8 +35,8 @@ html, body, .mi4 {
 }
 
 .mi4 .mi4-preview {
-  width: 80px;
-  height: 160px;
+  width: 120px;
+  height: 240px;
   border: 1px solid #000;
   border-radius: 5px;
   background-size: 100% 100%;
